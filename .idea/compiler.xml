@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="turbine-service" />
+        <module name="hystrix-service" />
+        <module name="admin-client" />
+        <module name="eureka-security-server" />
+        <module name="config-client" />
+        <module name="ribbion-server" />
+        <module name="dubbo-costomer" />
+        <module name="learn-base" />
+        <module name="dubbo-provide" />
+        <module name="config-server" />
+        <module name="eureka_client" />
+        <module name="hystrix-dashboard" />
+        <module name="eureka_server" />
+        <module name="api-gateway" />
+        <module name="admin-server" />
+        <module name="zookeeper-test" />
+        <module name="feign-service" />
+        <module name="dubbo-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="11">
+      <module name="eureka_security_server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin-client" options="-parameters" />
+      <module name="admin-server" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="config-client" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="dubbo-api" options="-parameters" />
+      <module name="dubbo-costomer" options="-parameters" />
+      <module name="dubbo-provide" options="-parameters" />
+      <module name="eureka-security-server" options="-parameters" />
+      <module name="eureka_client" options="-parameters" />
+      <module name="eureka_server" options="-parameters" />
+      <module name="feign-service" options="-parameters" />
+      <module name="hystrix-dashboard" options="-parameters" />
+      <module name="hystrix-service" options="-parameters" />
+      <module name="learn-base" options="-parameters" />
+      <module name="ribbion-server" options="-parameters" />
+      <module name="turbine-service" options="-parameters" />
+      <module name="zookeeper-test" options="-parameters" />
+    </option>
+  </component>
+</project>

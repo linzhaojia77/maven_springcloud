@@ -1,0 +1,23 @@
+11:35:30,996 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:zookeeper.version=3.5.3-beta-8ce24f9e675cbefffb8f21a47e06b42864475a60, built on 04/03/2017 16:19 GMT
+11:35:30,996 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:host.name=DESKTOP-D4UTB12
+11:35:30,996 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:java.version=11.0.6
+11:35:30,997 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:java.vendor=Oracle Corporation
+11:35:30,997 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:java.home=C:\Program Files\Java\jdk-11.0.6
+11:35:30,997 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:java.class.path=F:\newgit\maven_springcloud\zookeeper-test\target\classes;F:\maven-repository\org\apache\zookeeper\zookeeper\3.5.3-beta\zookeeper-3.5.3-beta.jar;F:\maven-repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;F:\maven-repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar;F:\maven-repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar;F:\maven-repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;F:\maven-repository\io\netty\netty\3.10.5.Final\netty-3.10.5.Final.jar
+11:35:30,998 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:java.library.path=C:\Program Files\Java\jdk-11.0.6\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk-11.0.6\bin;F:\apache-maven-3.6.3\bin;D:\apache-tomcat-9.0.13\bin;D:\gradle-6.8.1\bin;C:\Program Files\Git\cmd;C:\Users\lzs\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-11.0.6\bin;;.
+11:35:31,001 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:java.io.tmpdir=C:\Users\lzs\AppData\Local\Temp\
+11:35:31,001 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:java.compiler=<NA>
+11:35:31,001 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:os.name=Windows 10
+11:35:31,001 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:os.arch=amd64
+11:35:31,001 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:os.version=10.0
+11:35:31,002 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:user.name=lzs
+11:35:31,002 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:user.home=C:\Users\lzs
+11:35:31,002 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:user.dir=F:\newgit\maven_springcloud
+11:35:31,002 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:os.memory.free=249MB
+11:35:31,002 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:os.memory.max=4066MB
+11:35:31,002 INFO  [org.apache.zookeeper.ZooKeeper] Client environment:os.memory.total=256MB
+11:35:31,006 INFO  [org.apache.zookeeper.ZooKeeper] Initiating client connection, connectString=152.136.214.66:21810 sessionTimeout=2000 watcher=com.lzj.ZkApiTest$1@27d415d9
+11:35:31,291 INFO  [org.apache.zookeeper.ClientCnxnSocket] jute.maxbuffer value is 4194304 Bytes
+11:35:31,314 INFO  [org.apache.zookeeper.ClientCnxn] Opening socket connection to server 152.136.214.66/152.136.214.66:21810. Will not attempt to authenticate using SASL (unknown error)
+11:35:31,358 INFO  [org.apache.zookeeper.ClientCnxn] Socket connection established, initiating session, client: /192.168.112.53:50956, server: 152.136.214.66/152.136.214.66:21810
+11:35:31,406 INFO  [org.apache.zookeeper.ClientCnxn] Session establishment complete on server 152.136.214.66/152.136.214.66:21810, sessionid = 0x1023ef396eb0008, negotiated timeout = 4000

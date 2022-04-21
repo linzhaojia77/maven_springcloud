@@ -1,0 +1,83 @@
+server:
+  port: 9201
+service-url:
+  user-service: http://127.0.0.1:8103
+spring:
+#  redis:
+#    host: localhost
+#    password: xxxx
+#    port: 6379
+  cloud:
+    gateway:
+      routes:
+        #根据访问路径进行匹配跳转
+        - id: path_route #路由的ID
+          uri: ${service-url.user-service} #匹配后路由地址
+          predicates: # 断言，路径相匹配的进行路由
+            - Path=/find/name
+#        #根据指定时间之后（前/之间）进行匹配路由
+#        - id: path_route #路由的ID
+#          uri: ${service-url.user-service} #匹配后路由地址
+#          predicates: # 断言，路径相匹配的进行路由
+#            - After=2021-03-28T16:30:00+08:00[Asia/Shanghai]
+#            #(- Before=2021-03-28T16:30:00+08:00[Asia/Shanghai])
+#            #(- Between=2021-03-28T16:30:00+08:00[Asia/Shanghai],2021-03-29T16:30:00+08:00[Asia/Shanghai])
+#            #(根据携带的Cookie进行匹配，如：curl http://localhost:8103/find/name --cookie "x=y" )
+#            - Cookie=x,y
+#            #(根据指定请求头的请求进行匹配，如：curl http://localhost:8103/find/name -H "X-Request-Id:123" )
+#            - Header=X-Request-Id, \d+
+#            #(根据带有指定Host的请求进行匹配，如：curl http://localhost:8103/find/name -H "Host:www.lzj.com" )
+#            - Host=**.lzj.com
+#            #(根据指定请求方法进行匹配)
+#            - Method=GET
+#            #(根据携带参数进行匹配，如：curl http://localhost:8103/find/name?username=xxx)
+#            - Query=username
+#            #(根据远程发起地址ip进行匹配)
+#            - RemoteAddr=192.168.1.1/24
+#        #除了这些匹配规则可以自定义，gateway还内置了多种多样的过滤器供我们使用，不过我们不能自定义，只能使用内置指定好的过滤器
+#        - id: add_request_parameter_route #对应- AddRequestParameter
+#            # strip_prefix_route ，对应- StripPrefix
+#            # prefix_path_route。对应- PrefixPath
+#            #retry_route,对应 - name: Retry
+#            uri: ${service-url.user-service}
+#            filters:
+#              #这里会把我们所转到的路由后再加上一个指定参数为x，y为值的携带参数，相当于访问的是
+#              #${service-url.user-service}xxxx?x=y
+#              - AddRequestParameter=x, y
+#              #把转换后的路径去除前两个前缀，如：127.0.0.1:8103/find/name/1会变成{service-url.user-service}/1
+#             #- StripPrefix=2
+#              #与上面相反，会在转换后的路径加上前缀，如：127.0.0.1:8103/find/name/1会变成{service-url.user-service}/user/find/name/1
+#             #- PrefixPath=/user
+               #对出错的路由转换进行重试的过滤器
+              #- name: Retry
+#                  args:
+#                    retries: 1 #需要进行重试的次数
+#                    statuses: BAD_GATEWAY #返回哪个状态码需要进行重试，返回状态码为5XX进行重试
+#                    backoff:
+#                      firstBackoff: 10ms
+#                      maxBackoff: 50ms
+#                      factor: 2
+#                      basedOnPreviousValue: false
+#            predicates:
+#              - Method=GET
+#        #开启断路器功能，提供降级保护
+#        - id: hystrix_route
+#            uri: ${service-url.user-service}
+#            predicates:
+#              - Method=GET
+#            filters:
+#              - name: Hystrix
+#                args:
+#                  name: fallbackcmd
+#                  fallbackUri: forward:/fallback
+#        #指定限流规则
+#        - id: requestratelimiter_route
+#          uri: ${service-url.user-service}
+#          filters:
+#            - name: RequestRateLimiter
+#              args:
+#                redis-rate-limiter.replenishRate: 1 #每秒允许处理的请求数量
+#                redis-rate-limiter.burstCapacity: 2 #每秒最大处理的请求数量
+#                key-resolver: "#{@ipKeyResolver}" #限流策略，对应策略的Bean
+#          predicates:
+#            - Method=GET

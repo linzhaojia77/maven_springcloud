@@ -1,0 +1,19 @@
+server:
+  port: 8701
+spring:
+  application:
+    name: feign-service
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://admin:admin@127.0.0.1:8004/eureka/
+#在Feign中开启Hystrix,经测试无效哈，应该是版本问题，以后有空修改
+feign:
+  hystrix:
+    enabled: true
+
+logging:
+  level:
+    com.lzj.service.FineName: debug

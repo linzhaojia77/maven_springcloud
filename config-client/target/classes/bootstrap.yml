@@ -1,0 +1,26 @@
+#测试失败，配置文件名为bootstrap，eureka就注册不上服务注册，改为application.xml,
+#则spring-cloud-starter-config这个组件读取配置数据失败，真滴操蛋，应该是springboot、
+#springcloud的版本问题
+server:
+  port: 9001
+spring:
+  application:
+    name: config-client
+  cloud:
+    config: #Config客户端配置
+      profile: dev #启用配置后缀名称
+      label: master #分支名称
+      discovery:
+        enabled: true
+        service-id: config-server
+      #      uri: http://localhost:8901 #配置中心地址
+      name: config #配置文件名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@127.0.0.1:8004/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'

@@ -1,0 +1,11 @@
+server:
+  port: 10091
+
+dubbo:
+  application:
+    name: dubbo-provide
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://152.136.214.66:21810

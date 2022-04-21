@@ -1,0 +1,8 @@
+server:
+  port: 8090
+
+dubbo:
+  application:
+    name: dubbo-customer
+  registry:
+    address: zookeeper://152.136.214.66:21810
